@@ -24,8 +24,13 @@ var sieveOfEra = function(num) {
   for (i = 2; i <= num; i++) {
     numsUpToN.push(i);
   }
-
+  for (index = 0; index < num - 2; index++) {
+    numsUpToN = numsUpToN.filter(function(iteration){
+      return ((iteration % prime !== 0) || (iteration === prime));
+    });
+    prime++;
   }
+  return numsUpToN;
 }
 
 
