@@ -18,7 +18,15 @@ var factorializeRecursion = function(num) {
   }
 }
 
+var sieveOfEra = function(num) {
+  var numsUpToN = [];
+  var prime = 2;
+  for (i = 2; i <= num; i++) {
+    numsUpToN.push(i);
+  }
 
+  }
+}
 
 
 
@@ -38,6 +46,10 @@ $(function(){
     } else {
       $(".output1").text('false');
     }
+  });
+
+  $("#primes").submit(function(event){
+    var num = $("#primeNum").val();
 
   });
 });
